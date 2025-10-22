@@ -55,3 +55,6 @@ El patrón que más me costó entender e implementar correctamente fue el Facade
 
 ### 2. ¿Cómo se relacionan entre sí los patrones utilizados en tu diseño?
 Los patrones en este proyecto no operan de forma aislada, sino que se conectan y colaboran entre sí para crear un sistema coherente. El Decorator permite crear objetos Vendible complejos, que son gestionados por el Carrito. Cuando el Carrito cambia, notifica a sus observadores. Todo este flujo de compra culmina en la llamada a la CheckoutFacade, que toma los productos y orquesta los subsistemas. Uno de estos subsistemas, el de inventario, interactúa con el Producto, lo que puede disparar una notificación de stock. Finalmente, tanto la Facade como los Observadores utilizan la única instancia del AppLogger para registrar eventos importantes, centralizando así toda la información de la ejecución del programa.
+
+## Video de demostración
+https://drive.google.com/file/d/1_CNze-n0bgH_HRc4QtY_s-nY0oEFsxDL/view?usp=sharing
